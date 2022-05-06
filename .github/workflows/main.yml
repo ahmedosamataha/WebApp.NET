@@ -23,3 +23,13 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    
+    
+    - name: Upload a Build and Test Artifact
+      uses: actions/upload-artifact@v3.0.0
+      with:
+        name: webApp_build_test_artifact
+        path: TestResults 
+        retention-days: 90
+
+
