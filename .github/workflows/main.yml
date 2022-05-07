@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [master, feature]
 
+env:
+  app-name: "dnetwebapp"
+  rg-name: "devopstest"
+
 jobs:
   build:
 
