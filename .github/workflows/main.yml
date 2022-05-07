@@ -27,7 +27,8 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish WebApp.NET/myWebApp.csproj -c Release -o website
+      run: dotnet publish myWebApp.csproj -c Release -o website
+
     
     - name: Upload a Build and Test Artifact
       uses: actions/upload-artifact@v3.0.0
