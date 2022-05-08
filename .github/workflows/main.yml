@@ -32,10 +32,11 @@ jobs:
     #- name: Super-Linter
     #  uses: github/super-linter@v4.9.2
     - name: Run linters
-      uses: wearerequired/lint-action@v2
-      with:
-        dotnet_format: true
-       
+      #uses: wearerequired/lint-action@v2
+      #with:
+      #  dotnet_format: true
+      run: dotnet format --no-restore
+      
     # building, testing and publishing the web app   
     - name: Build
       run: dotnet build --no-restore
