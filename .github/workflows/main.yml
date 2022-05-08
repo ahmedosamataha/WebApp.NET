@@ -35,7 +35,7 @@ jobs:
       #uses: wearerequired/lint-action@v2
       #with:
       #  dotnet_format: true
-      run: dotnet format --no-restore
+      run: dotnet format
       
     # building, testing and publishing the web app   
     - name: Build
