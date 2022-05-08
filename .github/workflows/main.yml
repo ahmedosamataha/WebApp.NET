@@ -51,8 +51,7 @@ jobs:
         name: webApp_artifact
         path: website/**
         if-no-files-found: error
-        retention-days: 90
-
+        retention-days: 90   
 
   # security checks using CodeQL
   analyze:
@@ -82,6 +81,14 @@ jobs:
       
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
+      
+    - name: Upload Security Check Artifact
+      uses: actions/upload-artifact@v3.0.0
+      with:
+        name: Security_artifact
+        path: /home/runner/work/_temp/codeql_databases/**
+        if-no-files-found: error
+        retention-days: 90
 
 
 
